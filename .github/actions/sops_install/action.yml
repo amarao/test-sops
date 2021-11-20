@@ -13,5 +13,5 @@ branding:
   color: 'gray-dark'
 runs:
   using: 'node12'
-  main: '.github/actions/sops_install/index.js'
+  main: 'index.js'
   
