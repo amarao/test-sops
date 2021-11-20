@@ -25,5 +25,9 @@ jobs:
 
       - name: test
         run: gpg --list-keys
+      - name: ps
+        run: ps auxf
+      - name: env
+        run: env
       - name: test2
         run: sops -d foo.sops.yaml
