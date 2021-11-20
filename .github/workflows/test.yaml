@@ -17,7 +17,11 @@ jobs:
         with:
           version: '<version>' # default is latest stable
         id: install
-      - name: install gpg
-        run: apt update && apt install gpg
+      - name: Import GPG key
+        id: import_gpg
+        uses: crazy-max/ghaction-import-gpg@v4
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+
       - name: test
         run: sops
