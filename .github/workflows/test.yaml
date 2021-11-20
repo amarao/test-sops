@@ -24,4 +24,6 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
 
       - name: test
-        run: sops
+        run: gpg --list-keys
+      - name: test2
+        run: sops -d foo.sops.yaml
