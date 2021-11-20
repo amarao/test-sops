@@ -1,5 +1,5 @@
 ---
-name: Deploy to testnet
+name: Test
 
 "on":
   push:
@@ -13,7 +13,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Sops Binary Installer
-        uses: mdgreenwald/mozilla-sops-action@v1.1.0
+        # uses: mdgreenwald/mozilla-sops-action@v1.1.0
+        uses: ./.github/actions/sops_install
         # with:
         #   version: '<version>' # default is latest stable
         id: install
